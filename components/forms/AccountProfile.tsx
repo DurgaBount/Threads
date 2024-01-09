@@ -23,12 +23,12 @@ import { isBase64Image } from "@/lib/utils";
 
 interface Props {
   user: {
-    id: string;
-    objectId: string;
-    username: string;
+    id: string | undefined;
+    objectId: string | undefined;
+    username: string | null | undefined;
     name: string;
     bio: string;
-    image: string;
+    image: string | undefined;
   };
   btnTitle: string;
 }

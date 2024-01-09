@@ -4,11 +4,27 @@ import { currentUser } from "@clerk/nextjs";
 async function Page() {
   const user = await currentUser();
 
-  const userInfo = {};
+  interface userInfoProps {
+    id: string | undefined;
+    username: string | null | undefined;
+    name: string;
+    bio: string;
+    image: string | undefined;
+    objectId: string | undefined;
+  }
+
+  const userInfo: userInfoProps = {
+    id: "",
+    username: "",
+    name: "",
+    bio: "",
+    image: "",
+    objectId: "",
+  };
 
   const userData = {
     id: user?.id,
-    objectId: userInfo?._id,
+    objectId: userInfo?.id,
     username: userInfo?.username || user?.username,
     name: userInfo?.name || user?.firstName || "",
     bio: userInfo?.bio || "",
