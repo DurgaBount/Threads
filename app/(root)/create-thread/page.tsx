@@ -12,7 +12,7 @@ async function Page() {
 
   console.log("userInfo", userInfo);
 
-  //if (!userInfo?.onboarded) redirect("/onboarding");
+  if (!userInfo?.onboarded) redirect("/onboarding");
 
   return (
     <>

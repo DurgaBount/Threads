@@ -90,12 +90,12 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
     // TODO: Update user profile
 
     await updateUser({
-      userId: user.id,
-      usermame: values.username,
       name: values.name,
+      path: pathname,
+      username: values.username,
+      userId: user.id,
       bio: values.bio,
       image: values.profile_photo,
-      path: pathname,
     });
 
     if (pathname === "/profile/edit") {
