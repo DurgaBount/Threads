@@ -30,14 +30,14 @@ function Topbar() {
 
           {/* {isUserLoggedin ? <div></div> : <div></div>} */}
         </div>
-        <OrganizationSwitcher
+        {/* <OrganizationSwitcher
           appearance={{
             baseTheme: dark,
             elements: {
               organizationSwitcherTrigger: "py-2 px-4",
             },
           }}
-        />
+        /> */}
       </div>
     </nav>
   );
